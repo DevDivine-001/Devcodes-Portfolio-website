@@ -1,37 +1,34 @@
 import { useState, useEffect } from "react"
-// import { AppWrap, MotionWrap } from '../../wrapper';
-// import { urlFor, client } from '../../client';
 import React, { motion } from 'framer-motion'
 
 // // import images from "../../assets/logo.svg"
-import { images } from "../../constants"
+// import { images } from "../../constants"
 import "./About.scss"
+import { client, urlFor } from "../../clients"
 
-const abouts = [
-    { title: 'Web Development', describe: `I'm a good web developer.`, imgUrl: images.about01 },
-    { title: 'Front Development', describe: `I'm a good Front-End developer.`, imgUrl: images.about02 },
-    { title: 'Back Development', describe: `I'm a good Back-End developer.`, imgUrl: images.about03 },
-    { title: 'UI/UX', describe: `I'm a good UI/UX.`, imgUrl: images.about04 },
-]
-
-
+// const abouts = [
+//     { title: 'Web Development', description: `I'm a good web developer.`, imgUrl: images.about01 },
+//     { title: 'Frontend Development', description: `I'm a good Front-End developer.`, imgUrl: images.about02 },
+//     { title: 'Backend Development', description: `I'm a good Back-End developer.`, imgUrl: images.about03 },
+//     { title: 'MERN Stack', description: `I'm a good developer.`, imgUrl: images.about04 },
+// ]
 
 
 const About = () => {
-    // const [abouts, setAbouts] = useState([]);
+    const [abouts, setAbouts] = useState([]);
+    useEffect(() => {
+        const query = '*[_type == "abouts"]';
 
-    // useEffect(() => {
-    //     const query = '*[_type == "abouts"]';
+        client.fetch(query).then((data) => {
+            setAbouts(data);
+        });
+    }, []);
 
-    //     client.fetch(query).then((data) => {
-    //         setAbouts(data);
-    //     });
-    // }, []);
+
 
     return (
         <>
             <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
-
             <div className="app__profiles">
                 {abouts.map((about, index) => (
                     <motion.div
@@ -41,7 +38,7 @@ const About = () => {
                         className="app__profile-item"
                         key={about.title + index}
                     >
-                        <img src={about.imgUrl} alt={about.title} />
+                        <img src={urlFor(about.imgUrl)} alt={about.title} />
                         <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
                         <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
                     </motion.div>
