@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navigation = ({ active }) => {
+const NavigationDots = ({ active }) => {
     return (
         <div className='app__navigation'>
             {['home', 'about', 'work', 'testimonials', 'skills', 'contact'].map((item, index) => (
@@ -12,7 +12,7 @@ const Navigation = ({ active }) => {
                     style={active === item ? { backgroundColor: '#313BAC' } : {}}
                 />
 
-s
+
 
             ))}
 
@@ -20,4 +20,4 @@ s
     )
 }
 
-export default Navigation
+export default NavigationDots
