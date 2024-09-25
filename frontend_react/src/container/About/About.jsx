@@ -5,6 +5,7 @@ import React, { motion } from 'framer-motion'
 // import { images } from "../../constants"
 import "./About.scss"
 import { client, urlFor } from "../../clients"
+import { AppWrap } from "../../wrapper";
 
 // const abouts = [
 //     { title: 'Web Development', description: `I'm a good web developer.`, imgUrl: images.about01 },
@@ -48,7 +49,7 @@ const About = () => {
     );
 };
 
-export default About
+export default AppWrap(About, "about")
 //  AppWrap(
 //     MotionWrap(About, 'app__about'),
 //     'about',
