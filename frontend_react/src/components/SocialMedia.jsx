@@ -18,7 +18,6 @@ const SocialMedia = () => {
                     rel="noopener noreferrer">
                     <FaLinkedin />
                 </a>
-                sss
             </div>
         </div>
     )
