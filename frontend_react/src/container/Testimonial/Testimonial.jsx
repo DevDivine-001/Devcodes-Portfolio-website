@@ -9,6 +9,7 @@ import { motion } from "framer-motion"
 const Testimonial = () => {
     const [brands, setBrands] = useState([]);
     const [testimonial, setTestimonial] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
     return (
         <div>Testimonial</div>
     )
