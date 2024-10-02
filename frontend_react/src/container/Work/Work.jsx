@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import {
     AppWrap,
+    MotionWrap,
     // MotionWrap 
 } from '../../wrapper';
 import { urlFor, client } from '../../clients';
@@ -111,9 +112,9 @@ const Work = () => {
     );
 };
 
-export default AppWrap(Work, "work")
-// (
-//     MotionWrap(Work, 'app__works'),
-//     'work',
-//     'app__primarybg',
-// );
+export default AppWrap
+    (
+        MotionWrap(Work, 'app__works'),
+        'work',
+        'app__primarybg',
+    );

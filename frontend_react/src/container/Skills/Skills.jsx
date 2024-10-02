@@ -5,6 +5,7 @@ import { Tooltip as ReactTooltip } from 'react-tooltip'
 
 import {
     AppWrap,
+    MotionWrap,
     // MotionWrap 
 } from '../../wrapper';
 import { urlFor, client } from '../../clients';
@@ -92,9 +93,8 @@ const Skills = () => {
     );
 };
 
-export default AppWrap(Skills, "skills")
-// (
-//     MotionWrap(Skills, 'app__skills'),
-//     'skills',
-//     'app__whitebg',
-// );
+export default AppWrap(
+    MotionWrap(Skills, 'app__skills'),
+    'skills',
+    'app__whitebg',
+);
