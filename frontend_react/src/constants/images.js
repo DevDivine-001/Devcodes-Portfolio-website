@@ -35,6 +35,7 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import bgWhite from '../assets/bgWhite.png';
+import devprofile from '../assets/devprofile.png';
 
 export default {
     email,
@@ -64,6 +65,7 @@ export default {
     circle,
     logo,
     adidas,
+    devprofile,
     amazon,
     asus,
     bolt,

@@ -118,6 +118,28 @@
         }
     }
 
+    .dev {
+        // margin-bottom: 60%;
+        height: 56rem;
+        // width: 50rem;
+        background-color: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+        position: absolute;
+
+        // @media screen and (min-width: 2000px) {
+        //     div:nth-child(2) {
+        //         width: 700px;
+        //         height: 700px;
+        //     }
+        // }
+        @media screen and (max-width: 1200px) {
+            margin: 4rem 20rem;
+        }
+    }
+
     // circles with different height & width
 
     div:nth-child(1) {
