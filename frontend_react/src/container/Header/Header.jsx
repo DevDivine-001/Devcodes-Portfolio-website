@@ -48,7 +48,7 @@ const Header = () => {
             >
                 {/* <img src={images.figma} alt="profile_bg" className='dev' /> */}
                 {/* <img src={images.devprofile} alt="profile_bg" className='dev' /> */}
-                <img src={images.profile} alt="profile_bg" />
+                <img src={images.DevCodesprofile} alt="profile_bg" />
                 <motion.img
                     whileInView={{ scale: [0, 1] }}
                     transition={{ duration: 1, ease: "easeInOut" }}

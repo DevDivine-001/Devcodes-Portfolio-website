@@ -36,6 +36,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import bgWhite from '../assets/bgWhite.png';
 import devprofile from '../assets/devprofile.png';
+import DevCodesprofile from '../assets/DevCodesProfile.png';
 
 export default {
     email,
@@ -62,6 +63,7 @@ export default {
     about03,
     about04,
     profile,
+    DevCodesprofile,
     circle,
     logo,
     adidas,
